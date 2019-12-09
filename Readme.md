@@ -19,3 +19,6 @@ Emmanuel Mavuu ~
 
 Users will be able to input their details inorder to register their property.
 Makes use of Java RMI, JavaFX Code and JDBC for database Connection
+
+## Includes
+This repository also contains the Lab Practicals done throughout the semester and are all in the Lab Practicals folder.

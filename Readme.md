@@ -1,5 +1,5 @@
 # Advanced Object Oriented Programming: CAT 2 Project
-# Property Registration App
+### Property Registration App
 
 Project and Lab Files For <b>Group I</b>
 
@@ -7,10 +7,10 @@ Project and Lab Files For <b>Group I</b>
 
 ```java
 
-Steve Nyanumba ~ 111812
-Eve Wanjiku ~ 
-Deidre Mageto Moraa ~ 
-Emmanuel Mavuu ~ 
+Steve Nyanumba:- 111812;
+Eve Wanjiku:- 114191;
+Deidre Mageto Moraa:- ; 
+Emmanuel Mavuu:- 112724;
 
 
 ```

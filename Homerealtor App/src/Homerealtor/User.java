@@ -1,8 +1,8 @@
 package Homerealtor;
 
 public class User implements java.io.Serializable {
-   private int id,phoneNum;
-   private String name,email,propertyAddress,username,time;
+   private int id;
+   private String name,email,propertyAddress,username,time, phoneNum;
 
     public int getId() {
         return id;
@@ -16,7 +16,7 @@ public class User implements java.io.Serializable {
         return email;
     }
 
-    public int getPhoneNum() {
+    public String getPhoneNum() {
         return phoneNum;
     }
 
@@ -48,7 +48,7 @@ public class User implements java.io.Serializable {
         this.username = username;
     }
 
-    public void setPhoneNum(int phoneNum) {
+    public void setPhoneNum(String phoneNum) {
         this.phoneNum = phoneNum;
     }
 

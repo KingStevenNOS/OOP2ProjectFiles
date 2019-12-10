@@ -180,12 +180,8 @@ public class Main extends Application{
                     }
                     if (authenticate == true){
 
-                        User user = new User();
-                        int id = user.getId();
-                        String name = user.getName();
-                        String propertyAddress = user.getPropertyAddress();
-                        String date = user.getTime();
-                        YourProperty.display(name,propertyAddress,date);
+                        message.setText("Login Successful");
+                        message.setStyle("-fx-text-fill: green");
 
                     }else{
 
@@ -241,6 +237,7 @@ public class Main extends Application{
             window.setScene(layout);
             window.setTitle("Property App: Please Log In");
             message.setText("Please Log In");
+            message.setStyle("-fx-text-fill: black");
         });
     }
 }

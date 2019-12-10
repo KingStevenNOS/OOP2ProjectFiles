@@ -4,6 +4,8 @@ import java.rmi.RemoteException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 //implementing the remote interface
@@ -14,6 +16,7 @@ public class AuthenticationImpl implements Methods_RMI{
     public boolean Authenticate(String username, String password, String message) throws RemoteException, ClassNotFoundException, SQLException {
         //Connect to JDBC
         boolean loginValue;
+        List<User> list = new ArrayList<User>();
         Class.forName("com.mysql.cj.jdbc.Driver");
 
         //Open a connection
@@ -28,9 +31,11 @@ public class AuthenticationImpl implements Methods_RMI{
         if (rs.next()) {
             //Get Data by Column name
             int id = rs.getInt("id");
+            String userName = rs.getString("name");
             String name = rs.getString("name");
             String email = rs.getString("email");
-            int phoneNum = rs.getInt("phoneNumber");
+            String propertyAddress = rs.getString("propertyAddress");
+            String phoneNum = rs.getString("phoneNumber");
             String time = rs.getString("Date");
 
             //Set the Values
@@ -40,7 +45,8 @@ public class AuthenticationImpl implements Methods_RMI{
             user.setName(name);
             user.setPhoneNum(phoneNum);
             user.setTime(time);
-
+            list.add(user);
+            Homerealtor.main(userName,name,email,propertyAddress,time);
             loginValue = true;
 
         }
@@ -52,6 +58,7 @@ public class AuthenticationImpl implements Methods_RMI{
         return loginValue;
     }
 
+
     @Override
 
     //Implement Register Method
@@ -61,7 +68,7 @@ public class AuthenticationImpl implements Methods_RMI{
         Class.forName("com.mysql.cj.jdbc.Driver");
 
         //Open a connection
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Homerealtor","root","");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/homerealtor","root","");
 
         //Execute Query
         if (name.isEmpty() || username.isEmpty() || password.isEmpty() || propertyAddress.isEmpty() || email.isEmpty()){
@@ -70,19 +77,13 @@ public class AuthenticationImpl implements Methods_RMI{
 
         }else{
             Statement statement = connection.createStatement();
-            statement.executeUpdate("INSERT INTO users(username , password, name, propertyAddress, phoneNumber, email) VALUES('"+username+"','"+password+"','"+name+"','"+propertyAddress+"','"+phoneNum+"','"+email+"')");
+            statement.executeUpdate("INSERT INTO users(username,password,name,propertyAddress,phoneNumber,email) VALUES('"+username+"','"+password+"','"+name+"','"+propertyAddress+"','"+phoneNum+"','"+email+"')");
 
             rs = true;
         }
         connection.close();
 
         return rs;
-    }
-
-    @Override
-    //Implementing The Update Method
-    public String Update(String propertyAddress, String email ) throws RemoteException {
-        return null;
     }
 
 

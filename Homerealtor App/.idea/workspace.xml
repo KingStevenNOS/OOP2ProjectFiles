@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Homerealtor App/Homerealtor/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Homerealtor App/Homerealtor/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Homerealtor/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homerealtor/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -214,7 +216,7 @@
       <workItem from="1575829748130" duration="21358000" />
       <workItem from="1575925018585" duration="1910000" />
       <workItem from="1575990702174" duration="11357000" />
-      <workItem from="1576057225317" duration="612000" />
+      <workItem from="1576057225317" duration="1643000" />
     </task>
     <servers />
   </component>

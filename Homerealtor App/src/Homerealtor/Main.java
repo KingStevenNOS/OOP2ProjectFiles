@@ -155,7 +155,7 @@ public class Main extends Application{
 
         //Setting Scenes Current Configuration
         layout2 = new Scene(grid2);
-        grid2.getChildren().addAll(lblConfPass,lblusername,lblEmail,lblname,lblNewPass,lblProperty,property,newPass,name,username,confPass,email,goBack,register2,message2);
+        grid2.getChildren().addAll(lblConfPass,lblusername,lblEmail,lblname,lblNewPass,lblProperty,property,newPass,name,username,confPass,email,goBack,register2,message2,lblPhoneNum,phoneNum);
 
 
 
